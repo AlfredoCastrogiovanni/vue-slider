@@ -44,8 +44,13 @@ createApp({
         toSlide(index) {
             this.activeIndex = index;
         },
+
         stopautoplay() {
             clearInterval(this.clock);
+        },
+
+        startautoplay() {
+            this.clock = setInterval(this.toNext, 500);
         }
     }
 }).mount('#app')
